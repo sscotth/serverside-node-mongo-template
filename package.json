@@ -4,6 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,6 +18,7 @@
   },
   "homepage": "https://github.com/sscotth/serverside-node-mongo-template#readme",
   "dependencies": {
+    "babel": "^5.8.21",
     "express": "^4.13.3"
   }
 }

@@ -11,11 +11,11 @@ app.use(function helloWorld(req, res) {
   res.send('Hello World!');
 });
 
-app.listen(app.get('port'), function () {
-  console.log('Server listening on port %d in %s mode...',
-    app.get('port'),
-    app.get('env')
-  );
+var server = app.listen(app.get('port'), function () {
+  var port = server.address().port;
+  var mode = app.get('env');
+
+  console.log(`Server listening on port ${port} in ${mode} mode...`);
 });
 
 module.exports = app;
