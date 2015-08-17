@@ -1,0 +1,1 @@
+# serverside-node-mongo-template
