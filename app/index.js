@@ -19,6 +19,7 @@ app.use(handleNotFoundErrors());
 app.use(handleInternalServerErrors());
 
 var server = app.listen(app.get('port'), function () {
+  /* eslint-disable no-console */
   var port = server.address().port;
   var mode = app.get('env');
 

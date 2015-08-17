@@ -3,6 +3,7 @@
 var errorhandler = require('errorhandler');
 
 module.exports = function () {
+  /* eslint-disable no-unused-vars */
   var env = process.env.NODE_ENV || 'development';
 
   if (env === 'production') {
