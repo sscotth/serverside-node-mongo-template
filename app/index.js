@@ -4,6 +4,7 @@ var express = require('express');
 var morgan = require('morgan');
 
 var routes = require('./routes');
+var handleInternalServerErrors = require('./errors/internalServer');
 
 var app = express();
 
@@ -11,6 +12,7 @@ app.set('port', process.env.PORT || 3000);
 
 app.use(morgan('dev'));
 app.use('/', routes);
+app.use(handleInternalServerErrors());
 
 var server = app.listen(app.get('port'), function () {
   var port = server.address().port;
