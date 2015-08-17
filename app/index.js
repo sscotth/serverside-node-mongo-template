@@ -1,15 +1,14 @@
 'use strict';
 
 var express = require('express');
-var morgan = require('morgan');
+
+var routes = require('./routes');
 
 var app = express();
 
 app.set('port', process.env.PORT || 3000);
 
-app.use(function helloWorld(req, res) {
-  res.send('Hello World!');
-});
+app.use('/', routes);
 
 var server = app.listen(app.get('port'), function () {
   var port = server.address().port;
