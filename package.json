@@ -1,0 +1,22 @@
+{
+  "name": "serverside-node-mongo-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sscotth/serverside-node-mongo-template.git"
+  },
+  "author": "Scott Humphries <scott@sscotth.io> (http://sscotth.io)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sscotth/serverside-node-mongo-template/issues"
+  },
+  "homepage": "https://github.com/sscotth/serverside-node-mongo-template#readme",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}
