@@ -19,6 +19,7 @@
   "homepage": "https://github.com/sscotth/serverside-node-mongo-template#readme",
   "dependencies": {
     "babel": "^5.8.21",
+    "errorhandler": "^1.4.2",
     "express": "^4.13.3"
   }
 }
