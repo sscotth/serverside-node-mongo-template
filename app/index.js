@@ -4,10 +4,8 @@ var express = require('express');
 var morgan = require('morgan');
 
 var routes = require('./routes');
-var handleInternalServerErrors = require('./errors/internalServer');
-var handleNotFoundErrors = require('./errors/notFound');
 
-var app = express();
+var app = module.exports = express();
 
 app.set('port', process.env.PORT || 3000);
 
@@ -15,8 +13,7 @@ app.use(morgan('dev'));
 
 app.use('/', routes);
 
-app.use(handleNotFoundErrors());
-app.use(handleInternalServerErrors());
+require('../lib/errorHandler/');
 
 var server = app.listen(app.get('port'), function () {
   /* eslint-disable no-console */
@@ -25,5 +22,3 @@ var server = app.listen(app.get('port'), function () {
 
   console.log(`Server listening on port ${port} in ${mode} mode...`);
 });
-
-module.exports = app;
