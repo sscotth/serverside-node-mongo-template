@@ -1,9 +1,9 @@
 'use strict';
 
 module.exports.index = function index(req, res) {
-  res.send('Home Page');
+  res.render('home/index');
 };
 
 module.exports.contact = function contact(req, res) {
-  res.send('Contact Page');
+  res.render('home/contact', {page: 'Contact'});
 };

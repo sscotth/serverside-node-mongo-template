@@ -3,6 +3,7 @@
 
 var express = require('express');
 var morgan = require('morgan');
+var path = require('path');
 
 var routes = require('./routes');
 var database = require('../lib/mongo/');
@@ -10,6 +11,10 @@ var database = require('../lib/mongo/');
 var app = module.exports = express();
 
 app.set('port', process.env.PORT || 3000);
+app.set('views', __dirname);
+app.set('view engine', 'jade');
+
+app.locals.title = 'SSNMT';
 
 app.use(morgan('dev'));
 
