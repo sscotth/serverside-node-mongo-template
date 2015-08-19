@@ -12,6 +12,7 @@ describe('Home Routes', function () {
         .get('/')
         .expect(200)
         .end(function (err, res) {
+          if (err) throw err;
           expect(res.text).to.contain("I'm an index page");
           done();
         });
@@ -24,6 +25,7 @@ describe('Home Routes', function () {
         .get('/contact')
         .expect(200)
         .end(function (err, res) {
+          if (err) throw err;
           expect(res.text).to.contain("I'm a contact page");
           done();
         });
